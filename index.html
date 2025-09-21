@@ -2,15 +2,100 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Flores para ti</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diseño Elegante</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #fdf2f8, #fce7f3, #fbcfe8);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .card {
+      position: relative;
+      width: 600px;
+      height: 400px;
+      background: white;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px;
+      overflow: hidden;
+    }
+
+    .card h1 {
+      font-size: 2.5em;
+      color: #a21caf;
+      margin: 0;
+    }
+
+    .card p {
+      font-size: 1.2em;
+      color: #6b21a8;
+      margin-top: 15px;
+    }
+
+    /* Flores decorativas */
+    .flower {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #ec4899, #db2777);
+      border-radius: 50%;
+      opacity: 0.7;
+      filter: blur(1px);
+      animation: float 6s infinite ease-in-out;
+    }
+
+    .flower::before,
+    .flower::after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, #f472b6, #db2777);
+      border-radius: 50%;
+    }
+
+    .flower::before {
+      transform: rotate(60deg);
+    }
+
+    .flower::after {
+      transform: rotate(-60deg);
+    }
+
+    .flower1 { top: -40px; left: -40px; animation-delay: 0s; }
+    .flower2 { bottom: -40px; right: -40px; animation-delay: 2s; }
+    .flower3 { top: -50px; right: -50px; animation-delay: 1s; }
+    .flower4 { bottom: -50px; left: -50px; animation-delay: 3s; }
+
+    @keyframes float {
+      0%, 100% { transform: scale(1) rotate(0deg); }
+      50% { transform: scale(1.1) rotate(15deg); }
+    }
+  </style>
 </head>
 <body>
-  <div class="fireworks"></div>
-  <div class="container">
-    <h1>🌻 Flores para ti 🌻</h1>
-    <h2>💛 TE AMO 💛</h2>
-    <img src="assets/flores.png" alt="Ramo de flores">
+  <div class="card">
+    <div class="flower flower1"></div>
+    <div class="flower flower2"></div>
+    <div class="flower flower3"></div>
+    <div class="flower flower4"></div>
+    
+    <div class="content">
+      <h1>🌸 Para alguien especial 🌸</h1>
+      <p>Que tus días estén llenos de alegría y flores</p>
+    </div>
   </div>
 </body>
 </html>
