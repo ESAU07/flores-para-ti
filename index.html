@@ -4,130 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Para Wendy 💛</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background: radial-gradient(circle at top, #fef3c7, #fde68a, #fbbf24);
-      overflow: hidden;
-      font-family: "Segoe UI", sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #78350f;
-    }
-
-    .content {
-      position: relative;
-      z-index: 2;
-    }
-
-    h1 {
-      font-size: 3em;
-      color: #ca8a04;
-      text-shadow: 0 0 20px #facc15, 0 0 40px #fde047;
-      animation: glow 2s infinite alternate;
-    }
-
-    h2 {
-      margin-top: 15px;
-      font-size: 1.8em;
-      color: #a16207;
-    }
-
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #facc15; }
-      to { text-shadow: 0 0 40px #fde047, 0 0 60px #fef9c3; }
-    }
-
-    /* Flores amarillas decorativas */
-    .flower {
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      background: radial-gradient(circle, #fef08a, #facc15, #ca8a04);
-      border-radius: 50%;
-      animation: float 6s infinite ease-in-out;
-      filter: blur(0.5px);
-    }
-
-    .flower::before,
-    .flower::after {
-      content: "";
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      background: radial-gradient(circle, #fde047, #facc15, #ca8a04);
-      border-radius: 50%;
-    }
-
-    .flower::before { transform: rotate(60deg); }
-    .flower::after { transform: rotate(-60deg); }
-
-    .flower1 { top: 50px; left: 50px; animation-delay: 0s; }
-    .flower2 { bottom: 50px; right: 50px; animation-delay: 2s; }
-    .flower3 { top: 50px; right: 50px; animation-delay: 1s; }
-    .flower4 { bottom: 50px; left: 50px; animation-delay: 3s; }
-
-    @keyframes float {
-      0%, 100% { transform: scale(1) rotate(0deg); }
-      50% { transform: scale(1.2) rotate(15deg); }
-    }
-
-    /* Fuegos artificiales */
-    .firework {
-      position: absolute;
-      bottom: 0;
-      width: 4px;
-      height: 80px;
-      background: transparent;
-      animation: shoot 2s infinite;
-    }
-
-    .firework::before {
-      content: "";
-      position: absolute;
-      top: -10px;
-      left: -10px;
-      width: 20px;
-      height: 20px;
-      border-radius: 50%;
-      background: radial-gradient(circle, #fef08a, transparent);
-      opacity: 0;
-      animation: explode 2s infinite;
-    }
-
-    .fw1 { left: 20%; animation-delay: 0s; }
-    .fw2 { left: 50%; animation-delay: 0.5s; }
-    .fw3 { left: 80%; animation-delay: 1s; }
-
-    @keyframes shoot {
-      0% { height: 0; bottom: 0; }
-      40% { height: 80px; bottom: 200px; }
-      60% { height: 0; bottom: 250px; }
-      100% { height: 0; bottom: 0; }
-    }
-
-    @keyframes explode {
-      0%, 40% { opacity: 0; transform: scale(0.5); }
-      50% { opacity: 1; transform: scale(2); }
-      100% { opacity: 0; transform: scale(0.5); }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Flores decorativas -->
   <div class="flower flower1"></div>
   <div class="flower flower2"></div>
   <div class="flower flower3"></div>
   <div class="flower flower4"></div>
 
+  <!-- Contenido central -->
   <div class="content">
     <h1>🌻 Para mi Wendy 💛</h1>
-    <h2>Eres mi flor amarilla más hermosa 🌻✨</h2>
+    <h2>Eres mi flor amarilla más hermosa 🌼✨</h2>
+
+    <!-- Foto de Wendy -->
+    <img src="wendy.jpg" alt="Wendy" class="foto">
   </div>
 
+  <!-- Fuegos artificiales -->
   <div class="firework fw1"></div>
   <div class="firework fw2"></div>
   <div class="firework fw3"></div>
