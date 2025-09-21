@@ -17,13 +17,36 @@ body {
 /* Títulos */
 h1, h2 {
   text-shadow: 0 0 20px gold;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+/* Animación de brillo */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px yellow, 0 0 20px gold, 0 0 30px orange;
+  }
+  to {
+    text-shadow: 0 0 20px gold, 0 0 40px yellow, 0 0 60px white;
+  }
 }
 
 /* Imagen de flores */
-img {
+.flores {
   width: 200px;
   margin-top: 20px;
   animation: pulse 2s infinite;
+}
+
+/* Foto especial de Wendy */
+.foto {
+  margin-top: 20px;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid gold;
+  box-shadow: 0 0 25px gold, 0 0 50px yellow;
+  animation: pulse 3s infinite;
 }
 
 /* Animación suave */
@@ -35,11 +58,12 @@ img {
 
 /* Efecto de fuegos artificiales */
 .fireworks {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: url('https://i.imgur.com/1I9FZ8c.gif') center/cover no-repeat;
   z-index: -1;
+  opacity: 0.8;
 }
